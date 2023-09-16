@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Status - Trip Simplified</title>
+  <link rel="stylesheet" href="./styles/status.css"> <!-- Add your CSS file path here -->
+</head>
+<body>
+    <div id="header">
+
+        <div class="logo">
+           <a style="text-decoration: none;" href="./index.html"><span class="w1">TRIP</span>
+            <div class="words"><span class="w2">SIMPL</span ><span class="w3"> IFIED </span></div>
+           </a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+        
+            <a href="./booking.html"> <span></span>HOME</a> 
+            <a href=""><span>BOOK TICKET</span></a>   
+            <a href="./login.html"><span>LOGIN/SIGN UP</span></a> 
+            
+           </nav>
+        </div>
+
+  <main>
+    <section class="booking-status">
+      <h2>Booking Status</h2>
+      <div class="booking-details">
+        <h3>Your Booking Details:</h3>
+        <ul>
+          <li><strong>Destination:</strong> City A</li>
+          <li><strong>Amount Paid:</strong> $50.00</li>
+          <li><strong>Departure Time:</strong> 08:00 AM</li>
+          <li><strong>Departure Place:</strong> Bus Terminal XYZ</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="reserve">
+    <p>
+        &copy; 2023 Trip_simplified.All rights reserved. 
+    </p>
+
+</div>
+
+  <script>
+  // Retrieve the booking details from sessionStorage
+const storedBookingDetails = sessionStorage.getItem("bookingDetails");
+
+// Check if bookingDetails exist in sessionStorage
+if (storedBookingDetails) {
+  // Parse the JSON string back into an object
+  const bookingDetails = JSON.parse(storedBookingDetails);
+
+  // Display the booking details on the page
+  const destinationElement = document.querySelector(".destination");
+  const amountElement = document.querySelector(".amount");
+  const timeElement = document.querySelector(".time");
+  const placeElement = document.querySelector(".place");
+
+  destinationElement.textContent = bookingDetails.destination;
+  amountElement.textContent = bookingDetails.amount;
+  timeElement.textContent = bookingDetails.time;
+  placeElement.textContent = bookingDetails.place;
+} else {
+  // Handle the case when no booking details are found
+  // You can display a message like "No booking details found."
+}
+</script>
+</body>
+</html>

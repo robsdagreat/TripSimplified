@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Ticket Booking - Trip Simplified</title>
+  <link rel="stylesheet" href="./styles/booking.css">
+  <!-- <script src="./scripts/booking.js"></script> -->
+</head>
+<body>
+    <div id="header">
+
+        <div class="logo">
+           <a style="text-decoration: none;" href="./index.html"><span class="w1">TRIP</span>
+            <div class="words"><span class="w2">SIMPL</span ><span class="w3"> IFIED </span></div>
+           </a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+            <a href="./index.html"><span>HOME</span></a> 
+            <a href="./Status.html"><span>BOOKING STATUS</span></a>   
+            <a href="./login.html"><span>LOGIN/SIGN UP</span></a> 
+            
+           </nav>
+        </div>
+  <main>
+    <section class="booking-form">
+        <div class="header">
+        <h2 >Book your Ticket</h2> </div>
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="departure-city">Departure City:</label>
+            <select id="departure-city" name="departure-city" required>
+                <option value="" disabled selected>Select Departure City</option>
+                <option value="City1">Kigali</option>
+                <option value="City2">Musanze</option>
+                <option value="City3">Muhanga</option>
+                <option value="City3">Kayonza</option>
+                <option value="City3">Korongi</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="destination-city">Destination City:</label>
+            <select id="destination-city" name="destination-city" required>
+                <option value="" disabled selected>Select Destination City</option>
+                <option value="CityA">Muhanga</option>
+                <option value="CityB">Ruhango</option>
+                <option value="CityC">Nyanza</option>
+                <option value="CityC">Huye</option>
+                <option value="CityC">Nyamagabe</option>
+                <option value="CityC">Nyaruguru</option>
+                <option value="CityC">Karongi</option>
+                <option value="CityC">Nyagatare</option>
+                <option value="CityC">Rwamagana</option>
+                <option value="CityC">Rusizi</option>
+                <option value="CityC">Rutsiro</option>
+                <option value="CityC">Gisagara</option>
+                <option value="CityC">Rubavu</option>
+                <option value="CityC">Bugesera</option>
+                <option value="CityC">Rulindo</option>
+                <option value="CityC">Gakenke</option>
+                <option value="CityC">Nyamasheke</option>
+                <option value="CityC">Kirehe</option>
+                <option value="CityC">Gatsibo</option>
+                <option value="CityC">Ngoma</option>
+                <option value="CityC">Ngororero</option>
+                <option value="CityC">Burera</option>
+                <option value="CityC">Nyabihu</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="departure-date">Departure Date:</label>
+            <input type="date" id="departure-date" name="departure-date" required>
+          </div>
+          <div class="form-group">
+            <label for="passenger-count">Passenger Count:</label>
+            <input type="number" id="passenger-count" name="passenger-count" min="1" max="10" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-name">Contact Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Contact Email:</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Contact Phone:</label>
+            <input type="tel" id="contact-phone" name="contact-phone" required>
+          </div>
+          <div class="form-group">
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+          </div>
+          <div class="payment-details">
+            <h3>Payment Details</h3>
+            <div class="payment-options">
+              <label for="payment-method">Payment Method:</label>
+              <select id="payment-method" name="payment-method" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="mobile-money">Mobile Money</option>
+              </select>
+              <div class="credit-card-info">
+                <label for="credit-card-number">Card Number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number" placeholder="Enter card number" required>
+                <label for="expiration-date">Expiration Date:</label>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+              </div>
+          
+              <div class="mobile-money-info">
+                  <label for="phone-number">Phone Number:</label>
+                  <input type="tel" id="phone-number" name="phone-number" placeholder="Enter phone number" required>
+                  <label for="payment-amount">Amount to Pay:</label>
+                  <input type="text" id="payment-amount" name="payment-amount" placeholder="Enter amount" required>
+                  <button id="initiate-payment">Initiate Payment</button>
+                </div>
+            </div>
+            
+                <button id="confirm-booking">Confirm Booking</button>
+            </div>
+        </form>
+      </div>
+    </section>
+  </main>
+    <div class="reserve">
+        <p>
+            &copy; 2023 Trip_simplified.All rights reserved. 
+        </p>
+    
+    </div>
+</div>
+<script>
+// Get references to the payment method select and payment form sections
+const paymentMethodSelect = document.getElementById("payment-method");
+const creditCardInfo = document.querySelector(".credit-card-info");
+const mobileMoneyInfo = document.querySelector(".mobile-money-info");
+
+// Add an event listener to the payment method select
+paymentMethodSelect.addEventListener("change", function () {
+  // Get the selected payment method
+  const selectedPaymentMethod = paymentMethodSelect.value;
+
+  // Show/hide payment form sections based on the selected method
+  if (selectedPaymentMethod === "credit-card") {
+    creditCardInfo.style.display = "block";
+    mobileMoneyInfo.style.display = "none";
+  } else if (selectedPaymentMethod === "mobile-money") {
+    creditCardInfo.style.display = "none";
+    mobileMoneyInfo.style.display = "block";
+  } else {
+    // Hide both sections if no method is selected
+    creditCardInfo.style.display = "none";
+    mobileMoneyInfo.style.display = "none";
+  }
+});
+
+// Retrieve form values when the user submits the form
+const departureCity = document.getElementById("departure-city").value;
+const destinationCity = document.getElementById("destination-city").value;
+const amountPaid = document.getElementById("amount-paid").value;
+const departureTime = document.getElementById("departure-time").value;
+const departurePlace = document.getElementById("departure-place").value;
+
+// Create an object to store the booking details
+const bookingDetails = {
+  destination: destinationCity,
+  amount: amountPaid,
+  time: departureTime,
+  place: departurePlace,
+};
+
+// Store the booking details in sessionStorage
+sessionStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
+</script>
+
+</body>
+</html>

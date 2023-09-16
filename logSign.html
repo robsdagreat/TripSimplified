@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign Up - Your Bus Ticketing Platform</title>
+    <link rel="stylesheet" href="./styles/login.css"> <!-- Include your CSS file path here -->
+</head>
+<body>
+    <div id="header">
+
+        <div class="logo">
+           <a style="text-decoration: none;" href="./index.html"><span class="w1">TRIP</span>
+            <div class="words"><span class="w2">SIMPL</span ><span class="w3"> IFIED </span></div>
+           </a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+        
+            <a href="./booking.html"> <span>BOOK TICKET</span></a> 
+            <a href="./Status.html"><span>BOOKING STATUS</span></a>   
+            <a href="./login.html"><span>LOGIN/SIGN UP</span></a> 
+            
+           </nav>
+        </div>
+        
+    </div>
+
+    <main>
+        <section class="login-signup-form">
+            <h2>Login or Sign Up</h2>
+            <div class="toggle-buttons">
+                <button id="login-toggle" class="active">Login</button>
+                <button id="signup-toggle">Sign Up</button>
+            </div>
+            <form id="login-form" class="active-form" onsubmit="return loginUser()">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                </div>
+                <button type="submit">  <a href="./admindashbord.html" style="color: white;"> Login </a></button>
+            </form>
+            <form id="signup-form" onsubmit="return signupUser()">
+                <div class="form-group">
+                    <label for="signup-name">Full Name:</label>
+                    <input type="text" id="signup-name" name="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="signup-password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="reserve">
+        <p>
+            &copy; 2023 Trip_simplified.All rights reserved. 
+        </p>
+    
+    </div>
+    <script>
+
+    const loginToggle = document.getElementById("login-toggle");
+    const signupToggle = document.getElementById("signup-toggle");
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+    
+    // Add event listener to the login button
+    loginToggle.addEventListener("click", function () {
+      loginForm.style.display = "block";
+      signupForm.style.display = "none";
+      // Optionally toggle the "active" class on buttons for styling
+      loginToggle.classList.add("active");
+      signupToggle.classList.remove("active");
+    });
+    
+    // Add event listener to the sign-up button
+    signupToggle.addEventListener("click", function () {
+      loginForm.style.display = "none";
+      signupForm.style.display = "block";
+      // Optionally toggle the "active" class on buttons for styling
+      loginToggle.classList.remove("active");
+      signupToggle.classList.add("active");
+    });
+</script>  
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* Reset default styles for some elements */
+body, div, h2, form, label, select, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 1);
+}
+
+p{
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.booking-form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+  color: #333;
+  margin-bottom: 20px; /* Added spacing below the heading */
+}
+
+form {
+  max-width: 400px; /* Adjust the form's maximum width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Added spacing between form groups */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Improved label readability */
+}
+
+select, input[type="date"], input[type="number"], input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Adjust input font size */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Payment Details Section */
+.payment-details {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-details h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Payment Options */
+.payment-options {
+  margin-bottom: 20px;
+}
+
+.payment-options label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.payment-options select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Credit Card Information */
+.credit-card-info {
+  display: none; /* Initially hidden */
+}
+
+.credit-card-info label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.credit-card-info input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Mobile Money Information */
+.mobile-money-info {
+  display: none; /* Initially hidden */
+}
+
+.mobile-money-info label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.mobile-money-info input[type="tel"],
+.mobile-money-info input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+
+.nav {
+  display: flex;
+  float: right;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: -20px;
+  font-size: 20px;
+  cursor: pointer;
+  padding-bottom: 100px;
+}
+
+.nav :nth-child(1) {
+  margin-right: 30px;
+}
+
+.nav :nth-child(2) {
+  margin-right: 30px;
+}
+
+.nav :nth-child(3) {
+  margin-right: 30px;
+}
+
+.nav :nth-child(4) {
+  margin-right: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: blue;
+}
+
+.nav span:hover {
+  opacity: 0.8;
+  color: blue;
+}
+
+.nav :nth-child(2) {
+  margin-left: 20px;
+}
+.nav :nth-child(3) {
+  margin-left: 20px;
+}
+.nav :nth-child(4) {
+  margin-left: 20px;
+}
+
+
+.p1 {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  margin-right: 20px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.p2 {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.p3 {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.p4 {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}  
+
+
+.logo {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.words {
+  margin-left: 50px;
+  margin-top: -20px;
+}
+
+.w1 {
+  font-style: italic;
+  font-family: fantasy;
+  color: blue;
+}
+
+.w2 {
+  font-style: normal;
+  color: green;
+  font-weight: bold;
+}
+
+.w3 {
+  font-style: normal;
+  color: purple;
+  font-weight: bold;
+}
+.reserve{
+  background: none;
+  margin-left: 520px;
+  color: white;
+}
+
+

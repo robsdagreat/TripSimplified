@@ -1,0 +1,125 @@
+body{
+    background: rgba(0, 0, 0, 1);
+}
+
+p{
+    font-family: sans-serif;
+}
+
+.logo {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.words {
+  margin-left: 50px;
+  margin-top: -20px;
+}
+
+.w1 {
+  font-style: italic;
+  font-family: fantasy;
+  color: blue;
+}
+
+.w2 {
+  font-style: normal;
+  color: green;
+  font-weight: bold;
+}
+
+.w3 {
+  font-style: normal;
+  color: purple;
+  font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    float: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: -20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .nav :nth-child(1) {
+    margin-right: 30px;
+  }
+  
+  .nav :nth-child(2) {
+    margin-right: 30px;
+  }
+  
+  .nav :nth-child(3) {
+    margin-right: 30px;
+  }
+  
+  .nav :nth-child(4) {
+    margin-right: 30px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .nav span:hover {
+    opacity: 0.8;
+    color: blue;
+  }
+  
+  .nav :nth-child(2) {
+    margin-left: 20px;
+  }
+  .nav :nth-child(3) {
+    margin-left: 20px;
+  }
+  .nav :nth-child(4) {
+    margin-left: 20px;
+  }
+  
+
+/* Styles for the Booking Status Page */
+.booking-status {
+    margin-top: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .booking-status h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .booking-details {
+    margin-top: 20px;
+  }
+  
+  .booking-details h3 {
+    color: #333;
+  }
+  
+  .booking-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .booking-details li {
+    margin: 10px 0;
+  }
+  
+  .booking-details li strong {
+    font-weight: bold;
+  }
+  
+  .reserve{
+    background: none;
+    margin-left: 520px;
+  }
+  
